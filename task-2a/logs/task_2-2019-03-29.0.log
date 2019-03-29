@@ -1,0 +1,760 @@
+04:56:34.369 [main] INFO  org.eclipse.jetty.util.log  - Logging initialized @18945ms to org.eclipse.jetty.util.log.Slf4jLog
+04:56:34.644 [main] INFO  org.eclipse.jetty.server.Server  - jetty-9.4.10.v20180503; built: 2018-05-03T15:56:21.710Z; git: daa59876e6f384329b122929e70a80934569428c; jvm 1.8.0_181-b13
+04:56:34.690 [main] INFO  o.e.j.server.handler.ContextHandler  - Started o.e.j.s.ServletContextHandler@95aa79c{/,null,AVAILABLE}
+04:56:34.712 [main] INFO  o.e.jetty.server.AbstractConnector  - Started ServerConnector@249b2dd4{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+04:56:34.713 [main] INFO  org.eclipse.jetty.server.Server  - Started @19292ms
+04:56:52.887 [qtp1479817486-21] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+04:56:52.912 [qtp1479817486-21] INFO  task-2a  - {:msg "Params are {\"phoneNumber\" \"+254715761632\", \"serviceCode\" \"*384*40438#\", \"text\" \"\", \"sessionId\" \"ATUid_aa882f30614447ff0ef65a1aaab68cd9\", \"networkCode\" \"99999\"}", :line 23}
+05:00:07.820 [main] INFO  o.e.jetty.server.AbstractConnector  - Stopped ServerConnector@249b2dd4{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+05:00:07.823 [main] INFO  o.e.j.server.handler.ContextHandler  - Stopped o.e.j.s.ServletContextHandler@95aa79c{/,null,UNAVAILABLE}
+05:00:07.936 [main] INFO  org.eclipse.jetty.server.Server  - jetty-9.4.10.v20180503; built: 2018-05-03T15:56:21.710Z; git: daa59876e6f384329b122929e70a80934569428c; jvm 1.8.0_181-b13
+05:00:07.938 [main] INFO  o.e.j.server.handler.ContextHandler  - Started o.e.j.s.ServletContextHandler@6caffb24{/,null,AVAILABLE}
+05:00:07.939 [main] INFO  o.e.jetty.server.AbstractConnector  - Started ServerConnector@6c88ffed{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+05:00:07.940 [main] INFO  org.eclipse.jetty.server.Server  - Started @232519ms
+05:00:17.028 [qtp2100400522-39] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+05:00:17.042 [qtp2100400522-39] ERROR i.p.http.impl.servlet-interceptor  - {:msg "Dev interceptor caught an exception; Forwarding it as the response.", :line 314}
+clojure.lang.ExceptionInfo: java.lang.ClassCastException in Interceptor  - clojure.lang.PersistentArrayMap cannot be cast to java.lang.String
+	at io.pedestal.interceptor.chain$throwable__GT_ex_info.invokeStatic(chain.clj:35)
+	at io.pedestal.interceptor.chain$throwable__GT_ex_info.invoke(chain.clj:32)
+	at io.pedestal.interceptor.chain$try_f.invokeStatic(chain.clj:57)
+	at io.pedestal.interceptor.chain$try_f.invoke(chain.clj:44)
+	at io.pedestal.interceptor.chain$process_all_with_binding.invokeStatic(chain.clj:171)
+	at io.pedestal.interceptor.chain$process_all_with_binding.invoke(chain.clj:146)
+	at io.pedestal.interceptor.chain$process_all$fn__16610.invoke(chain.clj:188)
+	at clojure.lang.AFn.applyToHelper(AFn.java:152)
+	at clojure.lang.AFn.applyTo(AFn.java:144)
+	at clojure.core$apply.invokeStatic(core.clj:665)
+	at clojure.core$with_bindings_STAR_.invokeStatic(core.clj:1973)
+	at clojure.core$with_bindings_STAR_.doInvoke(core.clj:1973)
+	at clojure.lang.RestFn.invoke(RestFn.java:425)
+	at io.pedestal.interceptor.chain$process_all.invokeStatic(chain.clj:186)
+	at io.pedestal.interceptor.chain$process_all.invoke(chain.clj:182)
+	at io.pedestal.interceptor.chain$enter_all.invokeStatic(chain.clj:235)
+	at io.pedestal.interceptor.chain$enter_all.invoke(chain.clj:229)
+	at io.pedestal.interceptor.chain$execute.invokeStatic(chain.clj:379)
+	at io.pedestal.interceptor.chain$execute.invoke(chain.clj:352)
+	at io.pedestal.interceptor.chain$execute.invokeStatic(chain.clj:389)
+	at io.pedestal.interceptor.chain$execute.invoke(chain.clj:352)
+	at io.pedestal.http.impl.servlet_interceptor$interceptor_service_fn$fn__21735.invoke(servlet_interceptor.clj:351)
+	at io.pedestal.http.servlet.FnServlet.service(servlet.clj:28)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:865)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:535)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:255)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1253)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:203)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:473)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:201)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1155)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:144)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.Server.handle(Server.java:531)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:352)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:260)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:281)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:102)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:118)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:760)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:678)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.ClassCastException: clojure.lang.PersistentArrayMap cannot be cast to java.lang.String
+	at cheshire.core$parse_string.invokeStatic(core.clj:207)
+	at cheshire.core$parse_string.invoke(core.clj:192)
+	at cheshire.core$parse_string.invokeStatic(core.clj:203)
+	at cheshire.core$parse_string.invoke(core.clj:192)
+	at task_2a$ussd.invokeStatic(task_2a.clj:24)
+	at task_2a$ussd.invoke(task_2a.clj:21)
+	at io.pedestal.interceptor$eval7133$fn__7134$fn__7135.invoke(interceptor.clj:41)
+	at io.pedestal.interceptor.chain$try_f.invokeStatic(chain.clj:54)
+	... 39 common frames omitted
+05:00:23.678 [qtp2100400522-35] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+05:00:23.680 [qtp2100400522-35] ERROR i.p.http.impl.servlet-interceptor  - {:msg "Dev interceptor caught an exception; Forwarding it as the response.", :line 314}
+clojure.lang.ExceptionInfo: java.lang.ClassCastException in Interceptor  - clojure.lang.PersistentArrayMap cannot be cast to java.lang.String
+	at io.pedestal.interceptor.chain$throwable__GT_ex_info.invokeStatic(chain.clj:35)
+	at io.pedestal.interceptor.chain$throwable__GT_ex_info.invoke(chain.clj:32)
+	at io.pedestal.interceptor.chain$try_f.invokeStatic(chain.clj:57)
+	at io.pedestal.interceptor.chain$try_f.invoke(chain.clj:44)
+	at io.pedestal.interceptor.chain$process_all_with_binding.invokeStatic(chain.clj:171)
+	at io.pedestal.interceptor.chain$process_all_with_binding.invoke(chain.clj:146)
+	at io.pedestal.interceptor.chain$process_all$fn__16610.invoke(chain.clj:188)
+	at clojure.lang.AFn.applyToHelper(AFn.java:152)
+	at clojure.lang.AFn.applyTo(AFn.java:144)
+	at clojure.core$apply.invokeStatic(core.clj:665)
+	at clojure.core$with_bindings_STAR_.invokeStatic(core.clj:1973)
+	at clojure.core$with_bindings_STAR_.doInvoke(core.clj:1973)
+	at clojure.lang.RestFn.invoke(RestFn.java:425)
+	at io.pedestal.interceptor.chain$process_all.invokeStatic(chain.clj:186)
+	at io.pedestal.interceptor.chain$process_all.invoke(chain.clj:182)
+	at io.pedestal.interceptor.chain$enter_all.invokeStatic(chain.clj:235)
+	at io.pedestal.interceptor.chain$enter_all.invoke(chain.clj:229)
+	at io.pedestal.interceptor.chain$execute.invokeStatic(chain.clj:379)
+	at io.pedestal.interceptor.chain$execute.invoke(chain.clj:352)
+	at io.pedestal.interceptor.chain$execute.invokeStatic(chain.clj:389)
+	at io.pedestal.interceptor.chain$execute.invoke(chain.clj:352)
+	at io.pedestal.http.impl.servlet_interceptor$interceptor_service_fn$fn__21735.invoke(servlet_interceptor.clj:351)
+	at io.pedestal.http.servlet.FnServlet.service(servlet.clj:28)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:865)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:535)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:255)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1253)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:203)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:473)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:201)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1155)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:144)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.Server.handle(Server.java:531)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:352)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:260)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:281)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:102)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:118)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:333)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:310)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:168)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.produce(EatWhatYouKill.java:132)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:760)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:678)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.ClassCastException: clojure.lang.PersistentArrayMap cannot be cast to java.lang.String
+	at cheshire.core$parse_string.invokeStatic(core.clj:207)
+	at cheshire.core$parse_string.invoke(core.clj:192)
+	at cheshire.core$parse_string.invokeStatic(core.clj:203)
+	at cheshire.core$parse_string.invoke(core.clj:192)
+	at task_2a$ussd.invokeStatic(task_2a.clj:24)
+	at task_2a$ussd.invoke(task_2a.clj:21)
+	at io.pedestal.interceptor$eval7133$fn__7134$fn__7135.invoke(interceptor.clj:41)
+	at io.pedestal.interceptor.chain$try_f.invokeStatic(chain.clj:54)
+	... 43 common frames omitted
+05:00:59.338 [qtp2100400522-34] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+05:00:59.342 [qtp2100400522-34] ERROR i.p.http.impl.servlet-interceptor  - {:msg "Dev interceptor caught an exception; Forwarding it as the response.", :line 314}
+clojure.lang.ExceptionInfo: java.lang.ClassCastException in Interceptor  - clojure.lang.PersistentArrayMap cannot be cast to java.lang.String
+	at io.pedestal.interceptor.chain$throwable__GT_ex_info.invokeStatic(chain.clj:35)
+	at io.pedestal.interceptor.chain$throwable__GT_ex_info.invoke(chain.clj:32)
+	at io.pedestal.interceptor.chain$try_f.invokeStatic(chain.clj:57)
+	at io.pedestal.interceptor.chain$try_f.invoke(chain.clj:44)
+	at io.pedestal.interceptor.chain$process_all_with_binding.invokeStatic(chain.clj:171)
+	at io.pedestal.interceptor.chain$process_all_with_binding.invoke(chain.clj:146)
+	at io.pedestal.interceptor.chain$process_all$fn__16610.invoke(chain.clj:188)
+	at clojure.lang.AFn.applyToHelper(AFn.java:152)
+	at clojure.lang.AFn.applyTo(AFn.java:144)
+	at clojure.core$apply.invokeStatic(core.clj:665)
+	at clojure.core$with_bindings_STAR_.invokeStatic(core.clj:1973)
+	at clojure.core$with_bindings_STAR_.doInvoke(core.clj:1973)
+	at clojure.lang.RestFn.invoke(RestFn.java:425)
+	at io.pedestal.interceptor.chain$process_all.invokeStatic(chain.clj:186)
+	at io.pedestal.interceptor.chain$process_all.invoke(chain.clj:182)
+	at io.pedestal.interceptor.chain$enter_all.invokeStatic(chain.clj:235)
+	at io.pedestal.interceptor.chain$enter_all.invoke(chain.clj:229)
+	at io.pedestal.interceptor.chain$execute.invokeStatic(chain.clj:379)
+	at io.pedestal.interceptor.chain$execute.invoke(chain.clj:352)
+	at io.pedestal.interceptor.chain$execute.invokeStatic(chain.clj:389)
+	at io.pedestal.interceptor.chain$execute.invoke(chain.clj:352)
+	at io.pedestal.http.impl.servlet_interceptor$interceptor_service_fn$fn__21735.invoke(servlet_interceptor.clj:351)
+	at io.pedestal.http.servlet.FnServlet.service(servlet.clj:28)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:865)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:535)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:255)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1253)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:203)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:473)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:201)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1155)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:144)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.Server.handle(Server.java:531)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:352)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:260)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:281)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:102)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:118)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:333)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:310)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:168)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.produce(EatWhatYouKill.java:132)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:760)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:678)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.ClassCastException: clojure.lang.PersistentArrayMap cannot be cast to java.lang.String
+	at cheshire.core$parse_string.invokeStatic(core.clj:207)
+	at cheshire.core$parse_string.invoke(core.clj:192)
+	at cheshire.core$parse_string.invokeStatic(core.clj:203)
+	at cheshire.core$parse_string.invoke(core.clj:192)
+	at task_2a$ussd.invokeStatic(task_2a.clj:24)
+	at task_2a$ussd.invoke(task_2a.clj:21)
+	at io.pedestal.interceptor$eval7133$fn__7134$fn__7135.invoke(interceptor.clj:41)
+	at io.pedestal.interceptor.chain$try_f.invokeStatic(chain.clj:54)
+	... 43 common frames omitted
+05:01:51.227 [main] INFO  o.e.jetty.server.AbstractConnector  - Stopped ServerConnector@6c88ffed{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+05:01:51.228 [main] INFO  o.e.j.server.handler.ContextHandler  - Stopped o.e.j.s.ServletContextHandler@6caffb24{/,null,UNAVAILABLE}
+05:01:51.307 [main] INFO  org.eclipse.jetty.server.Server  - jetty-9.4.10.v20180503; built: 2018-05-03T15:56:21.710Z; git: daa59876e6f384329b122929e70a80934569428c; jvm 1.8.0_181-b13
+05:01:51.309 [main] INFO  o.e.j.server.handler.ContextHandler  - Started o.e.j.s.ServletContextHandler@7fece723{/,null,AVAILABLE}
+05:01:51.310 [main] INFO  o.e.jetty.server.AbstractConnector  - Started ServerConnector@24af46dd{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+05:01:51.311 [main] INFO  org.eclipse.jetty.server.Server  - Started @335890ms
+05:01:55.189 [qtp1438689128-52] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+05:01:55.193 [qtp1438689128-52] INFO  task-2a  - {:msg "Params are {\"phoneNumber\" \"+254715761632\", \"serviceCode\" \"*384*40438#\", \"text\" \"\", \"sessionId\" \"ATUid_14585c50884cf40d868b1d9f82d92505\", \"networkCode\" \"99999\"}", :line 25}
+05:02:49.948 [main] INFO  o.e.jetty.server.AbstractConnector  - Stopped ServerConnector@24af46dd{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+05:02:49.949 [main] INFO  o.e.j.server.handler.ContextHandler  - Stopped o.e.j.s.ServletContextHandler@7fece723{/,null,UNAVAILABLE}
+05:02:50.033 [main] INFO  org.eclipse.jetty.server.Server  - jetty-9.4.10.v20180503; built: 2018-05-03T15:56:21.710Z; git: daa59876e6f384329b122929e70a80934569428c; jvm 1.8.0_181-b13
+05:02:50.035 [main] INFO  o.e.j.server.handler.ContextHandler  - Started o.e.j.s.ServletContextHandler@43d5031b{/,null,AVAILABLE}
+05:02:50.037 [main] INFO  o.e.jetty.server.AbstractConnector  - Started ServerConnector@5af57b73{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+05:02:50.037 [main] INFO  org.eclipse.jetty.server.Server  - Started @394617ms
+05:02:54.673 [qtp158531588-63] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+05:02:54.676 [qtp158531588-63] INFO  task-2a  - {:msg "Params are ATUid_7394d65cf644218d66e04e1e4eb99da0", :line 25}
+05:03:38.165 [main] INFO  o.e.jetty.server.AbstractConnector  - Stopped ServerConnector@5af57b73{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+05:03:38.166 [main] INFO  o.e.j.server.handler.ContextHandler  - Stopped o.e.j.s.ServletContextHandler@43d5031b{/,null,UNAVAILABLE}
+05:03:38.180 [main] INFO  org.eclipse.jetty.server.Server  - jetty-9.4.10.v20180503; built: 2018-05-03T15:56:21.710Z; git: daa59876e6f384329b122929e70a80934569428c; jvm 1.8.0_181-b13
+05:03:38.183 [main] INFO  o.e.j.server.handler.ContextHandler  - Started o.e.j.s.ServletContextHandler@5213a8f7{/,null,AVAILABLE}
+05:03:38.184 [main] INFO  o.e.jetty.server.AbstractConnector  - Started ServerConnector@30078038{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+05:03:38.185 [main] INFO  org.eclipse.jetty.server.Server  - Started @442764ms
+05:04:30.760 [main] INFO  o.e.jetty.server.AbstractConnector  - Stopped ServerConnector@30078038{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+05:04:30.761 [main] INFO  o.e.j.server.handler.ContextHandler  - Stopped o.e.j.s.ServletContextHandler@5213a8f7{/,null,UNAVAILABLE}
+05:04:30.840 [main] INFO  org.eclipse.jetty.server.Server  - jetty-9.4.10.v20180503; built: 2018-05-03T15:56:21.710Z; git: daa59876e6f384329b122929e70a80934569428c; jvm 1.8.0_181-b13
+05:04:30.843 [main] INFO  o.e.j.server.handler.ContextHandler  - Started o.e.j.s.ServletContextHandler@11a43807{/,null,AVAILABLE}
+05:04:30.844 [main] INFO  o.e.jetty.server.AbstractConnector  - Started ServerConnector@489cbbcb{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+05:04:30.845 [main] INFO  org.eclipse.jetty.server.Server  - Started @495424ms
+05:29:15.229 [main] INFO  o.e.jetty.server.AbstractConnector  - Stopped ServerConnector@489cbbcb{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+05:29:15.229 [main] INFO  o.e.j.server.handler.ContextHandler  - Stopped o.e.j.s.ServletContextHandler@11a43807{/,null,UNAVAILABLE}
+05:29:15.340 [main] INFO  org.eclipse.jetty.server.Server  - jetty-9.4.10.v20180503; built: 2018-05-03T15:56:21.710Z; git: daa59876e6f384329b122929e70a80934569428c; jvm 1.8.0_181-b13
+05:29:15.342 [main] INFO  o.e.j.server.handler.ContextHandler  - Started o.e.j.s.ServletContextHandler@75d64dc4{/,null,AVAILABLE}
+05:29:15.343 [main] INFO  o.e.jetty.server.AbstractConnector  - Started ServerConnector@16795459{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+05:29:15.343 [main] INFO  org.eclipse.jetty.server.Server  - Started @1979923ms
+05:29:23.596 [qtp585898103-111] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+05:29:23.602 [qtp585898103-111] INFO  task-2a  - {:msg "Params are ATUid_e2e93d5972f656c1ef46bf078d0c71e9", :line 29}
+05:29:34.670 [qtp585898103-107] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+05:29:34.671 [qtp585898103-107] INFO  task-2a  - {:msg "Params are ATUid_abf6d3b4ba29c18194d482aad7d93718", :line 29}
+05:32:07.217 [main] INFO  o.e.jetty.server.AbstractConnector  - Stopped ServerConnector@16795459{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+05:32:07.218 [main] INFO  o.e.j.server.handler.ContextHandler  - Stopped o.e.j.s.ServletContextHandler@75d64dc4{/,null,UNAVAILABLE}
+05:32:07.235 [main] INFO  org.eclipse.jetty.server.Server  - jetty-9.4.10.v20180503; built: 2018-05-03T15:56:21.710Z; git: daa59876e6f384329b122929e70a80934569428c; jvm 1.8.0_181-b13
+05:32:07.238 [main] INFO  o.e.j.server.handler.ContextHandler  - Started o.e.j.s.ServletContextHandler@42ec207f{/,null,AVAILABLE}
+05:32:07.239 [main] INFO  o.e.jetty.server.AbstractConnector  - Started ServerConnector@21819376{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+05:32:07.240 [main] INFO  org.eclipse.jetty.server.Server  - Started @2151819ms
+05:32:28.173 [qtp116220-122] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+05:32:28.174 [qtp116220-122] INFO  task-2a  - {:msg "Params are ATUid_525b285d7740af209d7bf473fc3fac30", :line 29}
+05:33:02.723 [main] INFO  o.e.jetty.server.AbstractConnector  - Stopped ServerConnector@21819376{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+05:33:02.723 [main] INFO  o.e.j.server.handler.ContextHandler  - Stopped o.e.j.s.ServletContextHandler@42ec207f{/,null,UNAVAILABLE}
+05:33:02.807 [main] INFO  org.eclipse.jetty.server.Server  - jetty-9.4.10.v20180503; built: 2018-05-03T15:56:21.710Z; git: daa59876e6f384329b122929e70a80934569428c; jvm 1.8.0_181-b13
+05:33:02.810 [main] INFO  o.e.j.server.handler.ContextHandler  - Started o.e.j.s.ServletContextHandler@3b577709{/,null,AVAILABLE}
+05:33:02.811 [main] INFO  o.e.jetty.server.AbstractConnector  - Started ServerConnector@452bddc0{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+05:33:02.812 [main] INFO  org.eclipse.jetty.server.Server  - Started @2207391ms
+05:33:07.872 [qtp617765955-133] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+05:33:07.874 [qtp617765955-133] INFO  task-2a  - {:msg "Params are ATUid_53068b4b2e91b9c73cd92d0444f3f134", :line 29}
+05:33:07.875 [qtp617765955-133] INFO  task-2a  - {:msg "{\"phoneNumber\" \"+254715761632\", \"serviceCode\" \"*384*40438#\", \"text\" \"\", \"sessionId\" \"ATUid_53068b4b2e91b9c73cd92d0444f3f134\", \"networkCode\" \"99999\"}", :line 30}
+05:34:58.424 [main] INFO  o.e.jetty.server.AbstractConnector  - Stopped ServerConnector@452bddc0{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+05:34:58.424 [main] INFO  o.e.j.server.handler.ContextHandler  - Stopped o.e.j.s.ServletContextHandler@3b577709{/,null,UNAVAILABLE}
+05:34:58.509 [main] INFO  org.eclipse.jetty.server.Server  - jetty-9.4.10.v20180503; built: 2018-05-03T15:56:21.710Z; git: daa59876e6f384329b122929e70a80934569428c; jvm 1.8.0_181-b13
+05:34:58.513 [main] INFO  o.e.j.server.handler.ContextHandler  - Started o.e.j.s.ServletContextHandler@1a900a73{/,null,AVAILABLE}
+05:34:58.515 [main] INFO  o.e.jetty.server.AbstractConnector  - Started ServerConnector@174e9ae8{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+05:34:58.516 [main] INFO  org.eclipse.jetty.server.Server  - Started @2323095ms
+05:35:03.482 [qtp1027894185-144] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+05:35:03.485 [qtp1027894185-144] ERROR i.p.http.impl.servlet-interceptor  - {:msg "Dev interceptor caught an exception; Forwarding it as the response.", :line 314}
+clojure.lang.ExceptionInfo: java.lang.ClassCastException in Interceptor  - clojure.lang.PersistentArrayMap cannot be cast to java.lang.String
+	at io.pedestal.interceptor.chain$throwable__GT_ex_info.invokeStatic(chain.clj:35)
+	at io.pedestal.interceptor.chain$throwable__GT_ex_info.invoke(chain.clj:32)
+	at io.pedestal.interceptor.chain$try_f.invokeStatic(chain.clj:57)
+	at io.pedestal.interceptor.chain$try_f.invoke(chain.clj:44)
+	at io.pedestal.interceptor.chain$process_all_with_binding.invokeStatic(chain.clj:171)
+	at io.pedestal.interceptor.chain$process_all_with_binding.invoke(chain.clj:146)
+	at io.pedestal.interceptor.chain$process_all$fn__16610.invoke(chain.clj:188)
+	at clojure.lang.AFn.applyToHelper(AFn.java:152)
+	at clojure.lang.AFn.applyTo(AFn.java:144)
+	at clojure.core$apply.invokeStatic(core.clj:665)
+	at clojure.core$with_bindings_STAR_.invokeStatic(core.clj:1973)
+	at clojure.core$with_bindings_STAR_.doInvoke(core.clj:1973)
+	at clojure.lang.RestFn.invoke(RestFn.java:425)
+	at io.pedestal.interceptor.chain$process_all.invokeStatic(chain.clj:186)
+	at io.pedestal.interceptor.chain$process_all.invoke(chain.clj:182)
+	at io.pedestal.interceptor.chain$enter_all.invokeStatic(chain.clj:235)
+	at io.pedestal.interceptor.chain$enter_all.invoke(chain.clj:229)
+	at io.pedestal.interceptor.chain$execute.invokeStatic(chain.clj:379)
+	at io.pedestal.interceptor.chain$execute.invoke(chain.clj:352)
+	at io.pedestal.interceptor.chain$execute.invokeStatic(chain.clj:389)
+	at io.pedestal.interceptor.chain$execute.invoke(chain.clj:352)
+	at io.pedestal.http.impl.servlet_interceptor$interceptor_service_fn$fn__21735.invoke(servlet_interceptor.clj:351)
+	at io.pedestal.http.servlet.FnServlet.service(servlet.clj:28)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:865)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:535)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:255)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1253)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:203)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:473)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:201)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1155)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:144)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.Server.handle(Server.java:531)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:352)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:260)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:281)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:102)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:118)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:760)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:678)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.ClassCastException: clojure.lang.PersistentArrayMap cannot be cast to java.lang.String
+	at cheshire.core$parse_string.invokeStatic(core.clj:207)
+	at cheshire.core$parse_string.invoke(core.clj:192)
+	at cheshire.core$parse_string.invokeStatic(core.clj:203)
+	at cheshire.core$parse_string.invoke(core.clj:192)
+	at task_2a$ussd.invokeStatic(task_2a.clj:25)
+	at task_2a$ussd.invoke(task_2a.clj:21)
+	at io.pedestal.interceptor$eval7133$fn__7134$fn__7135.invoke(interceptor.clj:41)
+	at io.pedestal.interceptor.chain$try_f.invokeStatic(chain.clj:54)
+	... 39 common frames omitted
+05:36:33.314 [main] INFO  o.e.jetty.server.AbstractConnector  - Stopped ServerConnector@174e9ae8{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+05:36:33.315 [main] INFO  o.e.j.server.handler.ContextHandler  - Stopped o.e.j.s.ServletContextHandler@1a900a73{/,null,UNAVAILABLE}
+05:36:33.398 [main] INFO  org.eclipse.jetty.server.Server  - jetty-9.4.10.v20180503; built: 2018-05-03T15:56:21.710Z; git: daa59876e6f384329b122929e70a80934569428c; jvm 1.8.0_181-b13
+05:36:33.401 [main] INFO  o.e.j.server.handler.ContextHandler  - Started o.e.j.s.ServletContextHandler@d7b38cf{/,null,AVAILABLE}
+05:36:33.402 [main] INFO  o.e.jetty.server.AbstractConnector  - Started ServerConnector@25370af5{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+05:36:33.402 [main] INFO  org.eclipse.jetty.server.Server  - Started @2417981ms
+05:36:38.980 [main] INFO  o.e.jetty.server.AbstractConnector  - Stopped ServerConnector@25370af5{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+05:36:38.981 [main] INFO  o.e.j.server.handler.ContextHandler  - Stopped o.e.j.s.ServletContextHandler@d7b38cf{/,null,UNAVAILABLE}
+05:36:38.996 [main] INFO  org.eclipse.jetty.server.Server  - jetty-9.4.10.v20180503; built: 2018-05-03T15:56:21.710Z; git: daa59876e6f384329b122929e70a80934569428c; jvm 1.8.0_181-b13
+05:36:38.999 [main] INFO  o.e.j.server.handler.ContextHandler  - Started o.e.j.s.ServletContextHandler@7672ea5f{/,null,AVAILABLE}
+05:36:39.001 [main] INFO  o.e.jetty.server.AbstractConnector  - Started ServerConnector@6bb1f0d6{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+05:36:39.001 [main] INFO  org.eclipse.jetty.server.Server  - Started @2423581ms
+05:36:45.058 [qtp1427210218-165] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+05:36:45.060 [qtp1427210218-165] INFO  task-2a  - {:msg "Params are ATUid_40ca559d557d38e2a24c287749d2b509", :line 30}
+05:38:12.479 [main] INFO  o.e.jetty.server.AbstractConnector  - Stopped ServerConnector@6bb1f0d6{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+05:38:12.480 [main] INFO  o.e.j.server.handler.ContextHandler  - Stopped o.e.j.s.ServletContextHandler@7672ea5f{/,null,UNAVAILABLE}
+05:38:12.565 [main] INFO  org.eclipse.jetty.server.Server  - jetty-9.4.10.v20180503; built: 2018-05-03T15:56:21.710Z; git: daa59876e6f384329b122929e70a80934569428c; jvm 1.8.0_181-b13
+05:38:12.567 [main] INFO  o.e.j.server.handler.ContextHandler  - Started o.e.j.s.ServletContextHandler@7116f350{/,null,AVAILABLE}
+05:38:12.569 [main] INFO  o.e.jetty.server.AbstractConnector  - Started ServerConnector@3fd3d49c{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+05:38:12.569 [main] INFO  org.eclipse.jetty.server.Server  - Started @2517149ms
+05:38:17.931 [qtp1877423664-176] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+05:38:17.935 [qtp1877423664-176] INFO  task-2a  - {:msg "Params are ATUid_605c480c149911ea16fdbbac2882f525", :line 30}
+05:39:19.541 [main] INFO  o.e.jetty.server.AbstractConnector  - Stopped ServerConnector@3fd3d49c{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+05:39:19.542 [main] INFO  o.e.j.server.handler.ContextHandler  - Stopped o.e.j.s.ServletContextHandler@7116f350{/,null,UNAVAILABLE}
+05:39:19.627 [main] INFO  org.eclipse.jetty.server.Server  - jetty-9.4.10.v20180503; built: 2018-05-03T15:56:21.710Z; git: daa59876e6f384329b122929e70a80934569428c; jvm 1.8.0_181-b13
+05:39:19.630 [main] INFO  o.e.j.server.handler.ContextHandler  - Started o.e.j.s.ServletContextHandler@76982efa{/,null,AVAILABLE}
+05:39:19.632 [main] INFO  o.e.jetty.server.AbstractConnector  - Started ServerConnector@79571cc5{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+05:39:19.632 [main] INFO  org.eclipse.jetty.server.Server  - Started @2584211ms
+05:39:23.065 [qtp1513587684-187] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+05:39:23.068 [qtp1513587684-187] INFO  task-2a  - {:msg "Params are ATUid_547fa1c71a90863b87df0893218b4fe3", :line 30}
+05:50:15.922 [main] INFO  o.e.jetty.server.AbstractConnector  - Stopped ServerConnector@79571cc5{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+05:50:15.923 [main] INFO  o.e.j.server.handler.ContextHandler  - Stopped o.e.j.s.ServletContextHandler@76982efa{/,null,UNAVAILABLE}
+05:50:23.218 [main] INFO  org.eclipse.jetty.server.Server  - jetty-9.4.10.v20180503; built: 2018-05-03T15:56:21.710Z; git: daa59876e6f384329b122929e70a80934569428c; jvm 1.8.0_181-b13
+05:50:23.221 [main] INFO  o.e.j.server.handler.ContextHandler  - Started o.e.j.s.ServletContextHandler@4effab3b{/,null,AVAILABLE}
+05:50:23.223 [main] INFO  o.e.jetty.server.AbstractConnector  - Started ServerConnector@27288bce{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+05:50:23.225 [main] INFO  org.eclipse.jetty.server.Server  - Started @3247804ms
+05:50:27.650 [qtp1418027094-199] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+05:50:27.657 [qtp1418027094-199] INFO  task-2a  - {:msg "Params are ATUid_1ebc511589a4b017197e9d0634fb9b5e", :line 28}
+05:50:33.941 [qtp1418027094-195] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+05:50:33.942 [qtp1418027094-195] INFO  task-2a  - {:msg "Params are ATUid_1ebc511589a4b017197e9d0634fb9b5e", :line 28}
+05:50:41.458 [qtp1418027094-198] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+05:50:41.459 [qtp1418027094-198] INFO  task-2a  - {:msg "Params are ATUid_1ebc511589a4b017197e9d0634fb9b5e", :line 28}
+05:58:30.604 [main] INFO  o.e.jetty.server.AbstractConnector  - Stopped ServerConnector@27288bce{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+05:58:30.605 [main] INFO  o.e.j.server.handler.ContextHandler  - Stopped o.e.j.s.ServletContextHandler@4effab3b{/,null,UNAVAILABLE}
+05:58:30.687 [main] INFO  org.eclipse.jetty.server.Server  - jetty-9.4.10.v20180503; built: 2018-05-03T15:56:21.710Z; git: daa59876e6f384329b122929e70a80934569428c; jvm 1.8.0_181-b13
+05:58:30.691 [main] INFO  o.e.j.server.handler.ContextHandler  - Started o.e.j.s.ServletContextHandler@6ba076ef{/,null,AVAILABLE}
+05:58:30.693 [main] INFO  o.e.jetty.server.AbstractConnector  - Started ServerConnector@4e928f5f{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+05:58:30.693 [main] INFO  org.eclipse.jetty.server.Server  - Started @3735272ms
+05:58:35.787 [qtp1129707446-213] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+05:58:35.790 [qtp1129707446-213] INFO  task-2a  - {:msg "Params are ATUid_0d39173b92334061eb531d2516fad895", :line 32}
+05:59:12.833 [main] INFO  o.e.jetty.server.AbstractConnector  - Stopped ServerConnector@4e928f5f{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+05:59:12.834 [main] INFO  o.e.j.server.handler.ContextHandler  - Stopped o.e.j.s.ServletContextHandler@6ba076ef{/,null,UNAVAILABLE}
+05:59:12.924 [main] INFO  org.eclipse.jetty.server.Server  - jetty-9.4.10.v20180503; built: 2018-05-03T15:56:21.710Z; git: daa59876e6f384329b122929e70a80934569428c; jvm 1.8.0_181-b13
+05:59:12.926 [main] INFO  o.e.j.server.handler.ContextHandler  - Started o.e.j.s.ServletContextHandler@3f314bad{/,null,AVAILABLE}
+05:59:12.927 [main] INFO  o.e.jetty.server.AbstractConnector  - Started ServerConnector@1ff4496{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+05:59:12.933 [main] INFO  org.eclipse.jetty.server.Server  - Started @3777508ms
+05:59:17.970 [qtp15095289-224] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+05:59:23.853 [qtp15095289-220] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+06:00:12.561 [main] INFO  o.e.jetty.server.AbstractConnector  - Stopped ServerConnector@1ff4496{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+06:00:12.561 [main] INFO  o.e.j.server.handler.ContextHandler  - Stopped o.e.j.s.ServletContextHandler@3f314bad{/,null,UNAVAILABLE}
+06:00:12.642 [main] INFO  org.eclipse.jetty.server.Server  - jetty-9.4.10.v20180503; built: 2018-05-03T15:56:21.710Z; git: daa59876e6f384329b122929e70a80934569428c; jvm 1.8.0_181-b13
+06:00:12.644 [main] INFO  o.e.j.server.handler.ContextHandler  - Started o.e.j.s.ServletContextHandler@76da91cf{/,null,AVAILABLE}
+06:00:12.646 [main] INFO  o.e.jetty.server.AbstractConnector  - Started ServerConnector@e3dc9e5{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+06:00:12.646 [main] INFO  org.eclipse.jetty.server.Server  - Started @3837225ms
+06:00:16.047 [qtp878923263-235] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+06:00:24.324 [qtp878923263-231] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+06:02:08.650 [main] INFO  o.e.jetty.server.AbstractConnector  - Stopped ServerConnector@e3dc9e5{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+06:02:08.651 [main] INFO  o.e.j.server.handler.ContextHandler  - Stopped o.e.j.s.ServletContextHandler@76da91cf{/,null,UNAVAILABLE}
+06:02:08.755 [main] INFO  org.eclipse.jetty.server.Server  - jetty-9.4.10.v20180503; built: 2018-05-03T15:56:21.710Z; git: daa59876e6f384329b122929e70a80934569428c; jvm 1.8.0_181-b13
+06:02:08.757 [main] INFO  o.e.j.server.handler.ContextHandler  - Started o.e.j.s.ServletContextHandler@dcaa310{/,null,AVAILABLE}
+06:02:08.758 [main] INFO  o.e.jetty.server.AbstractConnector  - Started ServerConnector@2492f6fb{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+06:02:08.758 [main] INFO  org.eclipse.jetty.server.Server  - Started @3953338ms
+06:02:16.863 [qtp982283079-246] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+06:02:38.028 [main] INFO  o.e.jetty.server.AbstractConnector  - Stopped ServerConnector@2492f6fb{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+06:02:38.028 [main] INFO  o.e.j.server.handler.ContextHandler  - Stopped o.e.j.s.ServletContextHandler@dcaa310{/,null,UNAVAILABLE}
+06:02:38.119 [main] INFO  org.eclipse.jetty.server.Server  - jetty-9.4.10.v20180503; built: 2018-05-03T15:56:21.710Z; git: daa59876e6f384329b122929e70a80934569428c; jvm 1.8.0_181-b13
+06:02:38.125 [main] INFO  o.e.j.server.handler.ContextHandler  - Started o.e.j.s.ServletContextHandler@7be9e5fb{/,null,AVAILABLE}
+06:02:38.127 [main] INFO  o.e.jetty.server.AbstractConnector  - Started ServerConnector@6a937d6f{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+06:02:38.128 [main] INFO  org.eclipse.jetty.server.Server  - Started @3982707ms
+06:02:41.545 [qtp1935243292-257] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+06:02:54.578 [qtp1935243292-253] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+06:03:13.771 [qtp1935243292-256] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+06:03:21.237 [qtp1935243292-258] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+06:05:14.371 [main] INFO  o.e.jetty.server.AbstractConnector  - Stopped ServerConnector@6a937d6f{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+06:05:14.371 [main] INFO  o.e.j.server.handler.ContextHandler  - Stopped o.e.j.s.ServletContextHandler@7be9e5fb{/,null,UNAVAILABLE}
+06:05:32.486 [main] INFO  org.eclipse.jetty.server.Server  - jetty-9.4.10.v20180503; built: 2018-05-03T15:56:21.710Z; git: daa59876e6f384329b122929e70a80934569428c; jvm 1.8.0_181-b13
+06:05:32.490 [main] INFO  o.e.j.server.handler.ContextHandler  - Started o.e.j.s.ServletContextHandler@4b9a2d73{/,null,AVAILABLE}
+06:05:32.492 [main] INFO  o.e.jetty.server.AbstractConnector  - Started ServerConnector@7997b8a7{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+06:05:32.493 [main] INFO  org.eclipse.jetty.server.Server  - Started @4157072ms
+06:05:36.637 [qtp847473790-269] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+06:05:46.681 [qtp847473790-265] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+06:06:24.396 [qtp847473790-264] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+06:06:30.511 [qtp847473790-268] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+07:14:08.756 [main] INFO  o.e.jetty.server.AbstractConnector  - Stopped ServerConnector@7997b8a7{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+07:14:08.757 [main] INFO  o.e.j.server.handler.ContextHandler  - Stopped o.e.j.s.ServletContextHandler@4b9a2d73{/,null,UNAVAILABLE}
+07:14:08.839 [main] INFO  org.eclipse.jetty.server.Server  - jetty-9.4.10.v20180503; built: 2018-05-03T15:56:21.710Z; git: daa59876e6f384329b122929e70a80934569428c; jvm 1.8.0_181-b13
+07:14:08.842 [main] INFO  o.e.j.server.handler.ContextHandler  - Started o.e.j.s.ServletContextHandler@25a0c208{/,null,AVAILABLE}
+07:14:08.844 [main] INFO  o.e.jetty.server.AbstractConnector  - Started ServerConnector@3f993305{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+07:14:08.845 [main] INFO  org.eclipse.jetty.server.Server  - Started @8273425ms
+07:14:17.508 [qtp194373178-348] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+07:14:31.705 [qtp194373178-344] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+07:23:08.662 [main] INFO  o.e.jetty.server.AbstractConnector  - Stopped ServerConnector@3f993305{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+07:23:08.663 [main] INFO  o.e.j.server.handler.ContextHandler  - Stopped o.e.j.s.ServletContextHandler@25a0c208{/,null,UNAVAILABLE}
+07:23:08.751 [main] INFO  org.eclipse.jetty.server.Server  - jetty-9.4.10.v20180503; built: 2018-05-03T15:56:21.710Z; git: daa59876e6f384329b122929e70a80934569428c; jvm 1.8.0_181-b13
+07:23:08.821 [main] INFO  o.e.j.server.handler.ContextHandler  - Started o.e.j.s.ServletContextHandler@ad71740{/,null,AVAILABLE}
+07:23:08.822 [main] INFO  o.e.jetty.server.AbstractConnector  - Started ServerConnector@5163ba42{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+07:23:08.823 [main] INFO  org.eclipse.jetty.server.Server  - Started @8813402ms
+07:23:12.109 [qtp939990235-359] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+07:23:34.904 [qtp939990235-355] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+07:23:41.649 [qtp939990235-358] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+07:23:45.841 [qtp939990235-360] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+07:25:11.592 [main] INFO  o.e.jetty.server.AbstractConnector  - Stopped ServerConnector@5163ba42{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+07:25:11.592 [main] INFO  o.e.j.server.handler.ContextHandler  - Stopped o.e.j.s.ServletContextHandler@ad71740{/,null,UNAVAILABLE}
+07:25:11.689 [main] INFO  org.eclipse.jetty.server.Server  - jetty-9.4.10.v20180503; built: 2018-05-03T15:56:21.710Z; git: daa59876e6f384329b122929e70a80934569428c; jvm 1.8.0_181-b13
+07:25:11.691 [main] INFO  o.e.j.server.handler.ContextHandler  - Started o.e.j.s.ServletContextHandler@286e2387{/,null,AVAILABLE}
+07:25:11.692 [main] INFO  o.e.jetty.server.AbstractConnector  - Started ServerConnector@46f7fc28{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+07:25:11.693 [main] INFO  org.eclipse.jetty.server.Server  - Started @8936272ms
+07:25:17.764 [qtp2067147798-370] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+07:25:24.680 [qtp2067147798-366] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+07:25:33.762 [qtp2067147798-369] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+07:25:37.542 [qtp2067147798-371] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+07:26:09.938 [qtp2067147798-365] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+07:26:26.363 [main] INFO  o.e.jetty.server.AbstractConnector  - Stopped ServerConnector@46f7fc28{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+07:26:26.364 [main] INFO  o.e.j.server.handler.ContextHandler  - Stopped o.e.j.s.ServletContextHandler@286e2387{/,null,UNAVAILABLE}
+07:26:26.375 [main] INFO  org.eclipse.jetty.server.Server  - jetty-9.4.10.v20180503; built: 2018-05-03T15:56:21.710Z; git: daa59876e6f384329b122929e70a80934569428c; jvm 1.8.0_181-b13
+07:26:26.380 [main] INFO  o.e.j.server.handler.ContextHandler  - Started o.e.j.s.ServletContextHandler@6bce1a7f{/,null,AVAILABLE}
+07:26:26.383 [main] INFO  o.e.jetty.server.AbstractConnector  - Started ServerConnector@64b3ba13{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+07:26:26.384 [main] INFO  org.eclipse.jetty.server.Server  - Started @9010963ms
+07:26:32.142 [qtp1526782252-382] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+07:27:14.180 [main] INFO  o.e.jetty.server.AbstractConnector  - Stopped ServerConnector@64b3ba13{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+07:27:14.181 [main] INFO  o.e.j.server.handler.ContextHandler  - Stopped o.e.j.s.ServletContextHandler@6bce1a7f{/,null,UNAVAILABLE}
+07:27:14.276 [main] INFO  org.eclipse.jetty.server.Server  - jetty-9.4.10.v20180503; built: 2018-05-03T15:56:21.710Z; git: daa59876e6f384329b122929e70a80934569428c; jvm 1.8.0_181-b13
+07:27:14.278 [main] INFO  o.e.j.server.handler.ContextHandler  - Started o.e.j.s.ServletContextHandler@2de5bb6e{/,null,AVAILABLE}
+07:27:14.279 [main] INFO  o.e.jetty.server.AbstractConnector  - Started ServerConnector@743772bc{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+07:27:14.280 [main] INFO  org.eclipse.jetty.server.Server  - Started @9058859ms
+07:27:20.465 [qtp382275244-393] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+07:27:25.356 [qtp382275244-389] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+07:27:35.216 [qtp382275244-392] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+07:28:46.821 [main] INFO  o.e.jetty.server.AbstractConnector  - Stopped ServerConnector@743772bc{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+07:28:46.821 [main] INFO  o.e.j.server.handler.ContextHandler  - Stopped o.e.j.s.ServletContextHandler@2de5bb6e{/,null,UNAVAILABLE}
+07:28:46.921 [main] INFO  org.eclipse.jetty.server.Server  - jetty-9.4.10.v20180503; built: 2018-05-03T15:56:21.710Z; git: daa59876e6f384329b122929e70a80934569428c; jvm 1.8.0_181-b13
+07:28:46.923 [main] INFO  o.e.j.server.handler.ContextHandler  - Started o.e.j.s.ServletContextHandler@4765e57{/,null,AVAILABLE}
+07:28:46.925 [main] INFO  o.e.jetty.server.AbstractConnector  - Started ServerConnector@16bf9b0a{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+07:28:46.926 [main] INFO  org.eclipse.jetty.server.Server  - Started @9151505ms
+07:28:51.461 [qtp29850289-403] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+07:28:54.476 [qtp29850289-399] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+07:29:01.429 [qtp29850289-402] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+07:32:45.823 [main] INFO  o.e.jetty.server.AbstractConnector  - Stopped ServerConnector@16bf9b0a{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+07:32:45.824 [main] INFO  o.e.j.server.handler.ContextHandler  - Stopped o.e.j.s.ServletContextHandler@4765e57{/,null,UNAVAILABLE}
+07:32:45.915 [main] INFO  org.eclipse.jetty.server.Server  - jetty-9.4.10.v20180503; built: 2018-05-03T15:56:21.710Z; git: daa59876e6f384329b122929e70a80934569428c; jvm 1.8.0_181-b13
+07:32:45.917 [main] INFO  o.e.j.server.handler.ContextHandler  - Started o.e.j.s.ServletContextHandler@67c492fc{/,null,AVAILABLE}
+07:32:45.918 [main] INFO  o.e.jetty.server.AbstractConnector  - Started ServerConnector@2349aa88{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+07:32:45.918 [main] INFO  org.eclipse.jetty.server.Server  - Started @9390497ms
+07:32:50.401 [qtp1975752061-414] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+07:32:53.676 [qtp1975752061-410] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+07:33:02.482 [qtp1975752061-413] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+07:33:53.546 [qtp1975752061-409] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+07:33:58.799 [qtp1975752061-415] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+07:34:05.944 [qtp1975752061-416] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+07:36:43.034 [qtp1975752061-415] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+07:44:18.143 [main] INFO  o.e.jetty.server.AbstractConnector  - Stopped ServerConnector@2349aa88{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+07:44:18.144 [main] INFO  o.e.j.server.handler.ContextHandler  - Stopped o.e.j.s.ServletContextHandler@67c492fc{/,null,UNAVAILABLE}
+07:44:18.237 [main] INFO  org.eclipse.jetty.server.Server  - jetty-9.4.10.v20180503; built: 2018-05-03T15:56:21.710Z; git: daa59876e6f384329b122929e70a80934569428c; jvm 1.8.0_181-b13
+07:44:18.239 [main] INFO  o.e.j.server.handler.ContextHandler  - Started o.e.j.s.ServletContextHandler@75b9bbab{/,null,AVAILABLE}
+07:44:18.240 [main] INFO  o.e.jetty.server.AbstractConnector  - Started ServerConnector@7a82be85{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+07:44:18.240 [main] INFO  org.eclipse.jetty.server.Server  - Started @10082820ms
+07:44:26.621 [qtp1920585976-425] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+07:44:26.623 [qtp1920585976-425] ERROR i.p.http.impl.servlet-interceptor  - {:msg "Dev interceptor caught an exception; Forwarding it as the response.", :line 314}
+clojure.lang.ExceptionInfo: java.lang.ClassCastException in Interceptor  - clojure.lang.Atom cannot be cast to java.lang.Number
+	at io.pedestal.interceptor.chain$throwable__GT_ex_info.invokeStatic(chain.clj:35)
+	at io.pedestal.interceptor.chain$throwable__GT_ex_info.invoke(chain.clj:32)
+	at io.pedestal.interceptor.chain$try_f.invokeStatic(chain.clj:57)
+	at io.pedestal.interceptor.chain$try_f.invoke(chain.clj:44)
+	at io.pedestal.interceptor.chain$process_all_with_binding.invokeStatic(chain.clj:171)
+	at io.pedestal.interceptor.chain$process_all_with_binding.invoke(chain.clj:146)
+	at io.pedestal.interceptor.chain$process_all$fn__16610.invoke(chain.clj:188)
+	at clojure.lang.AFn.applyToHelper(AFn.java:152)
+	at clojure.lang.AFn.applyTo(AFn.java:144)
+	at clojure.core$apply.invokeStatic(core.clj:665)
+	at clojure.core$with_bindings_STAR_.invokeStatic(core.clj:1973)
+	at clojure.core$with_bindings_STAR_.doInvoke(core.clj:1973)
+	at clojure.lang.RestFn.invoke(RestFn.java:425)
+	at io.pedestal.interceptor.chain$process_all.invokeStatic(chain.clj:186)
+	at io.pedestal.interceptor.chain$process_all.invoke(chain.clj:182)
+	at io.pedestal.interceptor.chain$enter_all.invokeStatic(chain.clj:235)
+	at io.pedestal.interceptor.chain$enter_all.invoke(chain.clj:229)
+	at io.pedestal.interceptor.chain$execute.invokeStatic(chain.clj:379)
+	at io.pedestal.interceptor.chain$execute.invoke(chain.clj:352)
+	at io.pedestal.interceptor.chain$execute.invokeStatic(chain.clj:389)
+	at io.pedestal.interceptor.chain$execute.invoke(chain.clj:352)
+	at io.pedestal.http.impl.servlet_interceptor$interceptor_service_fn$fn__21735.invoke(servlet_interceptor.clj:351)
+	at io.pedestal.http.servlet.FnServlet.service(servlet.clj:28)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:865)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:535)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:255)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1253)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:203)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:473)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:201)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1155)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:144)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.Server.handle(Server.java:531)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:352)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:260)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:281)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:102)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:118)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:760)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:678)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.ClassCastException: clojure.lang.Atom cannot be cast to java.lang.Number
+	at clojure.lang.Numbers.lte(Numbers.java:255)
+	at clojure.lang.Numbers.lte(Numbers.java:3933)
+	at task_2a$ussd.invokeStatic(task_2a.clj:35)
+	at task_2a$ussd.invoke(task_2a.clj:24)
+	at io.pedestal.interceptor$eval7133$fn__7134$fn__7135.invoke(interceptor.clj:41)
+	at io.pedestal.interceptor.chain$try_f.invokeStatic(chain.clj:54)
+	... 39 common frames omitted
+07:45:30.104 [main] INFO  o.e.jetty.server.AbstractConnector  - Stopped ServerConnector@7a82be85{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+07:45:30.104 [main] INFO  o.e.j.server.handler.ContextHandler  - Stopped o.e.j.s.ServletContextHandler@75b9bbab{/,null,UNAVAILABLE}
+07:45:30.200 [main] INFO  org.eclipse.jetty.server.Server  - jetty-9.4.10.v20180503; built: 2018-05-03T15:56:21.710Z; git: daa59876e6f384329b122929e70a80934569428c; jvm 1.8.0_181-b13
+07:45:30.202 [main] INFO  o.e.j.server.handler.ContextHandler  - Started o.e.j.s.ServletContextHandler@463e66c2{/,null,AVAILABLE}
+07:45:30.203 [main] INFO  o.e.jetty.server.AbstractConnector  - Started ServerConnector@6e48c5b2{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+07:45:30.204 [main] INFO  org.eclipse.jetty.server.Server  - Started @10154783ms
+07:45:35.579 [qtp1456599020-436] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+07:45:39.876 [qtp1456599020-432] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+07:45:46.327 [qtp1456599020-435] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+07:45:52.876 [qtp1456599020-437] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+07:45:55.783 [qtp1456599020-435] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+07:46:01.560 [qtp1456599020-437] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+07:47:08.339 [main] INFO  o.e.jetty.server.AbstractConnector  - Stopped ServerConnector@6e48c5b2{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+07:47:08.339 [main] INFO  o.e.j.server.handler.ContextHandler  - Stopped o.e.j.s.ServletContextHandler@463e66c2{/,null,UNAVAILABLE}
+07:47:08.437 [main] INFO  org.eclipse.jetty.server.Server  - jetty-9.4.10.v20180503; built: 2018-05-03T15:56:21.710Z; git: daa59876e6f384329b122929e70a80934569428c; jvm 1.8.0_181-b13
+07:47:08.439 [main] INFO  o.e.j.server.handler.ContextHandler  - Started o.e.j.s.ServletContextHandler@40bfd515{/,null,AVAILABLE}
+07:47:08.440 [main] INFO  o.e.jetty.server.AbstractConnector  - Started ServerConnector@204e6dda{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+07:47:08.441 [main] INFO  org.eclipse.jetty.server.Server  - Started @10253020ms
+07:47:12.545 [qtp1835106307-447] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+07:47:12.549 [qtp1835106307-447] ERROR i.p.http.impl.servlet-interceptor  - {:msg "Dev interceptor caught an exception; Forwarding it as the response.", :line 314}
+clojure.lang.ExceptionInfo: java.lang.ClassCastException in Interceptor  - java.lang.Long cannot be cast to clojure.lang.IFn
+	at io.pedestal.interceptor.chain$throwable__GT_ex_info.invokeStatic(chain.clj:35)
+	at io.pedestal.interceptor.chain$throwable__GT_ex_info.invoke(chain.clj:32)
+	at io.pedestal.interceptor.chain$try_f.invokeStatic(chain.clj:57)
+	at io.pedestal.interceptor.chain$try_f.invoke(chain.clj:44)
+	at io.pedestal.interceptor.chain$process_all_with_binding.invokeStatic(chain.clj:171)
+	at io.pedestal.interceptor.chain$process_all_with_binding.invoke(chain.clj:146)
+	at io.pedestal.interceptor.chain$process_all$fn__16610.invoke(chain.clj:188)
+	at clojure.lang.AFn.applyToHelper(AFn.java:152)
+	at clojure.lang.AFn.applyTo(AFn.java:144)
+	at clojure.core$apply.invokeStatic(core.clj:665)
+	at clojure.core$with_bindings_STAR_.invokeStatic(core.clj:1973)
+	at clojure.core$with_bindings_STAR_.doInvoke(core.clj:1973)
+	at clojure.lang.RestFn.invoke(RestFn.java:425)
+	at io.pedestal.interceptor.chain$process_all.invokeStatic(chain.clj:186)
+	at io.pedestal.interceptor.chain$process_all.invoke(chain.clj:182)
+	at io.pedestal.interceptor.chain$enter_all.invokeStatic(chain.clj:235)
+	at io.pedestal.interceptor.chain$enter_all.invoke(chain.clj:229)
+	at io.pedestal.interceptor.chain$execute.invokeStatic(chain.clj:379)
+	at io.pedestal.interceptor.chain$execute.invoke(chain.clj:352)
+	at io.pedestal.interceptor.chain$execute.invokeStatic(chain.clj:389)
+	at io.pedestal.interceptor.chain$execute.invoke(chain.clj:352)
+	at io.pedestal.http.impl.servlet_interceptor$interceptor_service_fn$fn__21735.invoke(servlet_interceptor.clj:351)
+	at io.pedestal.http.servlet.FnServlet.service(servlet.clj:28)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:865)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:535)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:255)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1253)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:203)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:473)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:201)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1155)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:144)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.Server.handle(Server.java:531)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:352)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:260)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:281)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:102)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:118)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:760)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:678)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.ClassCastException: java.lang.Long cannot be cast to clojure.lang.IFn
+	at task_2a$ussd.invokeStatic(task_2a.clj:43)
+	at task_2a$ussd.invoke(task_2a.clj:24)
+	at io.pedestal.interceptor$eval7133$fn__7134$fn__7135.invoke(interceptor.clj:41)
+	at io.pedestal.interceptor.chain$try_f.invokeStatic(chain.clj:54)
+	... 39 common frames omitted
+07:48:08.859 [main] INFO  o.e.jetty.server.AbstractConnector  - Stopped ServerConnector@204e6dda{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+07:48:08.860 [main] INFO  o.e.j.server.handler.ContextHandler  - Stopped o.e.j.s.ServletContextHandler@40bfd515{/,null,UNAVAILABLE}
+07:48:08.955 [main] INFO  org.eclipse.jetty.server.Server  - jetty-9.4.10.v20180503; built: 2018-05-03T15:56:21.710Z; git: daa59876e6f384329b122929e70a80934569428c; jvm 1.8.0_181-b13
+07:48:08.959 [main] INFO  o.e.j.server.handler.ContextHandler  - Started o.e.j.s.ServletContextHandler@1f7e6c3a{/,null,AVAILABLE}
+07:48:08.960 [main] INFO  o.e.jetty.server.AbstractConnector  - Started ServerConnector@55024328{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+07:48:08.961 [main] INFO  org.eclipse.jetty.server.Server  - Started @10313540ms
+07:48:12.625 [qtp2112312029-458] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+07:48:16.114 [qtp2112312029-454] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+07:48:18.718 [qtp2112312029-457] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+07:48:50.970 [main] INFO  o.e.jetty.server.AbstractConnector  - Stopped ServerConnector@55024328{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+07:48:50.970 [main] INFO  o.e.j.server.handler.ContextHandler  - Stopped o.e.j.s.ServletContextHandler@1f7e6c3a{/,null,UNAVAILABLE}
+07:48:51.083 [main] INFO  org.eclipse.jetty.server.Server  - jetty-9.4.10.v20180503; built: 2018-05-03T15:56:21.710Z; git: daa59876e6f384329b122929e70a80934569428c; jvm 1.8.0_181-b13
+07:48:51.086 [main] INFO  o.e.j.server.handler.ContextHandler  - Started o.e.j.s.ServletContextHandler@50ad030a{/,null,AVAILABLE}
+07:48:51.088 [main] INFO  o.e.jetty.server.AbstractConnector  - Started ServerConnector@1c825108{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+07:48:51.088 [main] INFO  org.eclipse.jetty.server.Server  - Started @10355668ms
+07:48:56.480 [qtp25789843-469] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+07:48:59.002 [qtp25789843-465] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+07:49:01.578 [qtp25789843-468] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+07:51:20.894 [main] INFO  o.e.jetty.server.AbstractConnector  - Stopped ServerConnector@1c825108{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+07:51:20.895 [main] INFO  o.e.j.server.handler.ContextHandler  - Stopped o.e.j.s.ServletContextHandler@50ad030a{/,null,UNAVAILABLE}
+07:51:20.988 [main] INFO  org.eclipse.jetty.server.Server  - jetty-9.4.10.v20180503; built: 2018-05-03T15:56:21.710Z; git: daa59876e6f384329b122929e70a80934569428c; jvm 1.8.0_181-b13
+07:51:20.991 [main] INFO  o.e.j.server.handler.ContextHandler  - Started o.e.j.s.ServletContextHandler@6719b4a{/,null,AVAILABLE}
+07:51:20.992 [main] INFO  o.e.jetty.server.AbstractConnector  - Started ServerConnector@3b05fba2{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+07:51:20.993 [main] INFO  org.eclipse.jetty.server.Server  - Started @10505572ms
+07:51:25.734 [qtp1892890357-482] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+07:51:28.842 [qtp1892890357-478] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+07:51:31.324 [qtp1892890357-481] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+07:52:23.492 [main] INFO  o.e.jetty.server.AbstractConnector  - Stopped ServerConnector@3b05fba2{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+07:52:23.492 [main] INFO  o.e.j.server.handler.ContextHandler  - Stopped o.e.j.s.ServletContextHandler@6719b4a{/,null,UNAVAILABLE}
+07:52:23.583 [main] INFO  org.eclipse.jetty.server.Server  - jetty-9.4.10.v20180503; built: 2018-05-03T15:56:21.710Z; git: daa59876e6f384329b122929e70a80934569428c; jvm 1.8.0_181-b13
+07:52:23.585 [main] INFO  o.e.j.server.handler.ContextHandler  - Started o.e.j.s.ServletContextHandler@239c4792{/,null,AVAILABLE}
+07:52:23.586 [main] INFO  o.e.jetty.server.AbstractConnector  - Started ServerConnector@598acf89{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+07:52:23.587 [main] INFO  org.eclipse.jetty.server.Server  - Started @10568166ms
+07:52:28.563 [qtp736497727-496] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+07:52:31.043 [qtp736497727-492] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+07:52:33.506 [qtp736497727-495] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+07:53:32.691 [main] INFO  o.e.jetty.server.AbstractConnector  - Stopped ServerConnector@598acf89{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+07:53:32.691 [main] INFO  o.e.j.server.handler.ContextHandler  - Stopped o.e.j.s.ServletContextHandler@239c4792{/,null,UNAVAILABLE}
+07:53:32.790 [main] INFO  org.eclipse.jetty.server.Server  - jetty-9.4.10.v20180503; built: 2018-05-03T15:56:21.710Z; git: daa59876e6f384329b122929e70a80934569428c; jvm 1.8.0_181-b13
+07:53:32.794 [main] INFO  o.e.j.server.handler.ContextHandler  - Started o.e.j.s.ServletContextHandler@554d4856{/,null,AVAILABLE}
+07:53:32.797 [main] INFO  o.e.jetty.server.AbstractConnector  - Started ServerConnector@46cd3592{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+07:53:32.798 [main] INFO  org.eclipse.jetty.server.Server  - Started @10637377ms
+07:53:37.433 [qtp762654505-507] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+07:53:37.436 [qtp762654505-507] ERROR i.p.http.impl.servlet-interceptor  - {:msg "Dev interceptor caught an exception; Forwarding it as the response.", :line 314}
+clojure.lang.ExceptionInfo: clojure.lang.ArityException in Interceptor  - Wrong number of args (1) passed to: clojure.core/get-in
+	at io.pedestal.interceptor.chain$throwable__GT_ex_info.invokeStatic(chain.clj:35)
+	at io.pedestal.interceptor.chain$throwable__GT_ex_info.invoke(chain.clj:32)
+	at io.pedestal.interceptor.chain$try_f.invokeStatic(chain.clj:57)
+	at io.pedestal.interceptor.chain$try_f.invoke(chain.clj:44)
+	at io.pedestal.interceptor.chain$process_all_with_binding.invokeStatic(chain.clj:171)
+	at io.pedestal.interceptor.chain$process_all_with_binding.invoke(chain.clj:146)
+	at io.pedestal.interceptor.chain$process_all$fn__16610.invoke(chain.clj:188)
+	at clojure.lang.AFn.applyToHelper(AFn.java:152)
+	at clojure.lang.AFn.applyTo(AFn.java:144)
+	at clojure.core$apply.invokeStatic(core.clj:665)
+	at clojure.core$with_bindings_STAR_.invokeStatic(core.clj:1973)
+	at clojure.core$with_bindings_STAR_.doInvoke(core.clj:1973)
+	at clojure.lang.RestFn.invoke(RestFn.java:425)
+	at io.pedestal.interceptor.chain$process_all.invokeStatic(chain.clj:186)
+	at io.pedestal.interceptor.chain$process_all.invoke(chain.clj:182)
+	at io.pedestal.interceptor.chain$enter_all.invokeStatic(chain.clj:235)
+	at io.pedestal.interceptor.chain$enter_all.invoke(chain.clj:229)
+	at io.pedestal.interceptor.chain$execute.invokeStatic(chain.clj:379)
+	at io.pedestal.interceptor.chain$execute.invoke(chain.clj:352)
+	at io.pedestal.interceptor.chain$execute.invokeStatic(chain.clj:389)
+	at io.pedestal.interceptor.chain$execute.invoke(chain.clj:352)
+	at io.pedestal.http.impl.servlet_interceptor$interceptor_service_fn$fn__21735.invoke(servlet_interceptor.clj:351)
+	at io.pedestal.http.servlet.FnServlet.service(servlet.clj:28)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:865)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:535)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:255)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1253)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:203)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:473)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:201)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1155)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:144)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.Server.handle(Server.java:531)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:352)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:260)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:281)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:102)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:118)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:760)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:678)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: clojure.lang.ArityException: Wrong number of args (1) passed to: clojure.core/get-in
+	at clojure.lang.AFn.throwArity(AFn.java:429)
+	at clojure.lang.AFn.invoke(AFn.java:32)
+	at task_2a$ussd.invokeStatic(task_2a.clj:36)
+	at task_2a$ussd.invoke(task_2a.clj:25)
+	at io.pedestal.interceptor$eval7133$fn__7134$fn__7135.invoke(interceptor.clj:41)
+	at io.pedestal.interceptor.chain$try_f.invokeStatic(chain.clj:54)
+	... 39 common frames omitted
+07:54:02.131 [main] INFO  o.e.jetty.server.AbstractConnector  - Stopped ServerConnector@46cd3592{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+07:54:02.132 [main] INFO  o.e.j.server.handler.ContextHandler  - Stopped o.e.j.s.ServletContextHandler@554d4856{/,null,UNAVAILABLE}
+07:54:02.225 [main] INFO  org.eclipse.jetty.server.Server  - jetty-9.4.10.v20180503; built: 2018-05-03T15:56:21.710Z; git: daa59876e6f384329b122929e70a80934569428c; jvm 1.8.0_181-b13
+07:54:02.227 [main] INFO  o.e.j.server.handler.ContextHandler  - Started o.e.j.s.ServletContextHandler@6e32eea5{/,null,AVAILABLE}
+07:54:02.228 [main] INFO  o.e.jetty.server.AbstractConnector  - Started ServerConnector@5919dd67{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+07:54:02.228 [main] INFO  org.eclipse.jetty.server.Server  - Started @10666808ms
+07:54:07.966 [qtp1211062772-518] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+07:54:07.969 [qtp1211062772-518] ERROR i.p.http.impl.servlet-interceptor  - {:msg "Dev interceptor caught an exception; Forwarding it as the response.", :line 314}
+clojure.lang.ExceptionInfo: java.lang.NullPointerException in Interceptor  - 
+	at io.pedestal.interceptor.chain$throwable__GT_ex_info.invokeStatic(chain.clj:35)
+	at io.pedestal.interceptor.chain$throwable__GT_ex_info.invoke(chain.clj:32)
+	at io.pedestal.interceptor.chain$try_f.invokeStatic(chain.clj:57)
+	at io.pedestal.interceptor.chain$try_f.invoke(chain.clj:44)
+	at io.pedestal.interceptor.chain$process_all_with_binding.invokeStatic(chain.clj:171)
+	at io.pedestal.interceptor.chain$process_all_with_binding.invoke(chain.clj:146)
+	at io.pedestal.interceptor.chain$process_all$fn__16610.invoke(chain.clj:188)
+	at clojure.lang.AFn.applyToHelper(AFn.java:152)
+	at clojure.lang.AFn.applyTo(AFn.java:144)
+	at clojure.core$apply.invokeStatic(core.clj:665)
+	at clojure.core$with_bindings_STAR_.invokeStatic(core.clj:1973)
+	at clojure.core$with_bindings_STAR_.doInvoke(core.clj:1973)
+	at clojure.lang.RestFn.invoke(RestFn.java:425)
+	at io.pedestal.interceptor.chain$process_all.invokeStatic(chain.clj:186)
+	at io.pedestal.interceptor.chain$process_all.invoke(chain.clj:182)
+	at io.pedestal.interceptor.chain$enter_all.invokeStatic(chain.clj:235)
+	at io.pedestal.interceptor.chain$enter_all.invoke(chain.clj:229)
+	at io.pedestal.interceptor.chain$execute.invokeStatic(chain.clj:379)
+	at io.pedestal.interceptor.chain$execute.invoke(chain.clj:352)
+	at io.pedestal.interceptor.chain$execute.invokeStatic(chain.clj:389)
+	at io.pedestal.interceptor.chain$execute.invoke(chain.clj:352)
+	at io.pedestal.http.impl.servlet_interceptor$interceptor_service_fn$fn__21735.invoke(servlet_interceptor.clj:351)
+	at io.pedestal.http.servlet.FnServlet.service(servlet.clj:28)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:865)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:535)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:255)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1253)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:203)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:473)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:201)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1155)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:144)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.Server.handle(Server.java:531)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:352)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:260)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:281)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:102)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:118)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:760)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:678)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.NullPointerException: null
+	at java.util.regex.Matcher.getTextLength(Matcher.java:1283)
+	at java.util.regex.Matcher.reset(Matcher.java:309)
+	at java.util.regex.Matcher.<init>(Matcher.java:229)
+	at java.util.regex.Pattern.matcher(Pattern.java:1093)
+	at clojure.core$re_matcher.invokeStatic(core.clj:4856)
+	at clojure.core$re_find.invokeStatic(core.clj:4898)
+	at clojure.core$re_find.invoke(core.clj:4898)
+	at task_2a$ussd.invokeStatic(task_2a.clj:36)
+	at task_2a$ussd.invoke(task_2a.clj:25)
+	at io.pedestal.interceptor$eval7133$fn__7134$fn__7135.invoke(interceptor.clj:41)
+	at io.pedestal.interceptor.chain$try_f.invokeStatic(chain.clj:54)
+	... 39 common frames omitted
+07:55:15.075 [main] INFO  o.e.jetty.server.AbstractConnector  - Stopped ServerConnector@5919dd67{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+07:55:15.075 [main] INFO  o.e.j.server.handler.ContextHandler  - Stopped o.e.j.s.ServletContextHandler@6e32eea5{/,null,UNAVAILABLE}
+07:55:15.177 [main] INFO  org.eclipse.jetty.server.Server  - jetty-9.4.10.v20180503; built: 2018-05-03T15:56:21.710Z; git: daa59876e6f384329b122929e70a80934569428c; jvm 1.8.0_181-b13
+07:55:15.179 [main] INFO  o.e.j.server.handler.ContextHandler  - Started o.e.j.s.ServletContextHandler@e86c9a5{/,null,AVAILABLE}
+07:55:15.179 [main] INFO  o.e.jetty.server.AbstractConnector  - Started ServerConnector@c73b9fc{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+07:55:15.180 [main] INFO  org.eclipse.jetty.server.Server  - Started @10739760ms
+07:55:18.358 [qtp1424552202-529] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+07:55:21.501 [qtp1424552202-525] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+07:55:24.028 [qtp1424552202-528] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+07:55:59.489 [qtp1424552202-524] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
+07:56:03.919 [qtp1424552202-530] INFO  io.pedestal.http  - {:msg "POST /ussd", :line 80}
